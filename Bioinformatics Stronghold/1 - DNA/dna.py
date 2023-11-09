@@ -1,3 +1,12 @@
+"""
+Author: Thomas Pelowitz
+    Website: https://www.tpelowitz.com
+    Github: https://www.github.com/tjpel
+Date: 09NOV23
+
+Problem link: https://rosalind.info/problems/dna/
+"""
+
 class DNA():
     def __init__(self, dnaString):
         self.dnaString = dnaString
