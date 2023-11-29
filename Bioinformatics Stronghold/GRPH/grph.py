@@ -49,4 +49,4 @@ seq_dict: dict = SeqIO.to_dict(SeqIO.parse("rosalind_grph.fasta", "fasta"))
 solution: list = GRPH(seq_dict).solve()
 
 with open("grph_answer.txt", "w") as f:
-        f.writelines([f"{pair[0]} {pair[1]}\n" for pair in solution])
+    f.writelines([f"{pair[0]} {pair[1]}\n" for pair in solution])
