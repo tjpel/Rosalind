@@ -39,8 +39,8 @@ class MRNA():
         total_mod_1mil = 1
 
         for aa in self.prot_str:
-            #print(len(CODON_TABLE[aa]))
             total_mod_1mil *= len(CODON_TABLE[aa])
+            total_mod_1mil %= 1000000
 
         return (total_mod_1mil * 3) % 1000000 #stop codon
 
