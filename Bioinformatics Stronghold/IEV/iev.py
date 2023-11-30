@@ -4,19 +4,12 @@ Author: Thomas Pelowitz
     Github: https://www.github.com/tjpel
 Date: 29NOV23
 
-Problem link: https://rosalind.info/problems/grph/
+Problem link: https://rosalind.info/problems/iev/
 """
-
-def parseInput(input_str):
-    couples = []
-
-    couples = input_str.split(" ")
-
-    return couples
 
 class IEV():
     def __init__(self, allele_string):
-        self.couples = parseInput(allele_string)
+        self.couples = allele_string.split(" ")
 
     def solve(self):
         dominant_children = 0
