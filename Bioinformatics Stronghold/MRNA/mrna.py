@@ -32,6 +32,8 @@ CODON_TABLE = {
 }
 
 class MRNA():
+    ONEMIL = 1000000
+
     def __init__(self, prot_str):
         self.prot_str = prot_str
 
@@ -40,9 +42,9 @@ class MRNA():
 
         for aa in self.prot_str:
             total_mod_1mil *= len(CODON_TABLE[aa])
-            total_mod_1mil %= 1000000
+            total_mod_1mil %= ONEMIL
 
-        return (total_mod_1mil * 3) % 1000000 #stop codon
+        return (total_mod_1mil * 3) % ONEMIL #stop codon
 
 with open("rosalind_mrna.txt", "r") as f:
     prot_str = f.read().strip()
